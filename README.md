@@ -11,7 +11,13 @@ interests. As an aside this can be used as an entertaining way to learn and stay
 ## Inception and Initial UX Goals/Designs
 <hr>
 
-Here there should be balsamiq wireframes or drawn on paper ones
+<img src="assets/images/readme-images/wireframe1.PNG" width="1000">
+
+<img src="assets/images/readme-images/wireframe2.PNG" width="1000">
+
+<img src="assets/images/readme-images/wireframe3.PNG" width="1000">
+
+<img src="assets/images/readme-images/wireframe4.PNG" width="1000">
 
 ## Credits 
 <hr>
