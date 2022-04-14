@@ -92,4 +92,110 @@ body i {
 
 .card00 {
     background: url('../images/00-the-fool.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card01 {
+    background: url('../images/01-the-magician.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card02 {
+    background: url('../images/02-the-high-priestess.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card03 {
+    background: url('../images/03-the-empress.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card04 {
+    background: url('../images/04the-emporer.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card05 {
+    background: url('../images/05-the-hierophant.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card06 {
+    background: url('../images/06-the-lovers.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card07 {
+    background: url('../images/07-the-chariot.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card08 {
+    background: url('../images/08-strength.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card09 {
+    background: url('../images/09-the-hermit.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card10 {
+    background: url('../images/10-wheel-of-fortune.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card11 {
+    background: url('../images/11-justice.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card12 {
+    background: url('../images/12-the-hanged-man.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card13 {
+    background: url('../images/13-death.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card14 {
+    background: url('../images/14-temperance.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card15 {
+    background: url('../images/15-the-devil.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card16 {
+    background: url('../images/16-the-tower.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card17 {
+    background: url('../images/17-the-star.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card18 {
+    background: url('../images/18-the-moon.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card19 {
+    background: url('../images/19-the-sun.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card20 {
+    background: url('../images/20-judgement.jpg') no-repeat center center / contain;
+    display: none;
+}
+
+.card21 {
+    background: url('../images/21-the-world.jpg') no-repeat center center / contain;
+    display: none;
 }
