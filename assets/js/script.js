@@ -1,12 +1,29 @@
 let card;
-console.log(card);
+
+let cardNumber;
+
+let score = parseInt(document.getElementById('score').innerHTML);
+
+/**
+ * 
+ * Takes the number of the random card number generated in runGame(); for use in hiding the div on next round
+ */
+function cardNumReturn(cardNum) {
+    cardNumber = cardNum;
+}
 
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByClassName('question');
+    let buttons = document.getElementsByTagName('button');
 
     for (let button of buttons) {
         button.addEventListener('click', function() {
             if (this.getAttribute('data-type') === 'btnNext') {
+                document.getElementsByClassName('card')[cardNumber].style.display="none";
+                runGame();
+            } else if (this.getAttribute('data-type') === 'btnAgain') {
+                document.getElementById('end-title').style.display="none";
+                document.getElementById('end-sentence').style.display="none";
+                document.getElementById('play-again').style.display="none";
                 runGame();
             } else {
                 checkAnswer(this.innerHTML);
@@ -30,10 +47,10 @@ function runGame() {
     'The Hermit', 'Wheel of Fortune', 'Justice', 'The Hanged Man', 'Death', 'Temperance', 'The Devil', 'The Tower', 'The Star', 'The Moon', 'The Sun', 
     'Judgement', 'The World']
 
-    let cardNum = Math.floor(Math.random() * 22); //Generates our card number, from 0-21
+    let cardNum = Math.floor(Math.random() * 22); // Generates our card number, from 0-21
+    cardNumReturn(cardNum); // Returns our card number outward through this function
     card = cardArray[cardNum];
-    console.log(card);
-
+    
     switch (card) {
         case 'The Fool':
             displayFoolQuestions();
@@ -116,18 +133,26 @@ function checkAnswer(answerClicked) { // answerClicked takes over as the variabl
         alert('You did it!');
         incrementScore();
     } else {
-        alert('Uh oh stinky!');
+        alert('Oh no! Wrong card!');
     }
 
-    document.getElementById('next-btn').style.display="block";
+    if (score < 7) {
+        document.getElementById('next-btn').style.display="block";
+    }
 }
 
 /**
  * Increments the score by 1 when the user gets a question correct
  */
 function incrementScore() {
-    let score = parseInt(document.getElementById('score').innerHTML);
     document.getElementById('score').innerHTML = ++score;
+    if (score === 7) {
+        document.getElementsByClassName('card')[cardNumber].style.display="none";
+        document.getElementsByClassName('q1')[0].style.display="none";
+        document.getElementsByClassName('q2')[0].style.display="none";
+        document.getElementsByClassName('q3')[0].style.display="none";
+        document.getElementsByClassName('q4')[0].style.display="none";
+    }
 }
 
 /**
@@ -247,7 +272,7 @@ function displayWheelQuestions() {
     document.getElementsByClassName('card10')[0].style.display="block";
     document.getElementsByClassName('q1')[0].textContent = 'Temperance';
     document.getElementsByClassName('q2')[0].textContent = 'The World';
-    document.getElementsByClassName('q3')[0].textContent = 'Wheel Of Fortune';
+    document.getElementsByClassName('q3')[0].textContent = 'Wheel of Fortune';
     document.getElementsByClassName('q4')[0].textContent = 'The Star';
 };
 
