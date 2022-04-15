@@ -2,7 +2,11 @@ let card;
 
 let cardNumber;
 
+let cardsChosen = [];
+
 let score = parseInt(document.getElementById('score').innerHTML);
+
+let counter = 0;
 
 /**
  * 
@@ -20,15 +24,22 @@ document.addEventListener("DOMContentLoaded", function() {
             if (this.getAttribute('data-type') === 'btnNext') {
                 document.getElementsByClassName('card')[cardNumber].style.display="none";
                 runGame();
-            } else if (this.getAttribute('data-type') === 'btnAgain') {
+            } else if (this.getAttribute('data-type') === 'btnAgain') { // Resets everything, removes end game screen content
                 document.getElementById('end-title').style.display="none";
                 document.getElementById('end-sentence').style.display="none";
                 document.getElementById('play-again').style.display="none";
-                document.getElementById('score').innerHTML = score -= 7;
+                score = 0;
+                document.getElementById('score').innerHTML = score;
+                counter = 0;
+                cardsChosen = [];
                 runGame();
             } else {
                 checkAnswer(this.innerHTML);
                 document.getElementById('cover').style.display='none';
+                document.getElementsByClassName('q1')[0].style.display="none";
+                document.getElementsByClassName('q2')[0].style.display="none";
+                document.getElementsByClassName('q3')[0].style.display="none";
+                document.getElementsByClassName('q4')[0].style.display="none";
             }
         })
     }
@@ -53,77 +64,86 @@ function runGame() {
     'Judgement', 'The World']
 
     let cardNum = Math.floor(Math.random() * 22); // Generates our card number, from 0-21
-    cardNumReturn(cardNum); // Returns our card number outward through this function
-    card = cardArray[cardNum];
-    
-    switch (card) {
-        case 'The Fool':
-            displayFoolQuestions();
-            break;
-        case 'The Magician':
-            displayMagicianQuestions();
-            break;
-        case 'The High Priestess':
-            displayPriestessQuestions();
-            break;
-        case 'The Empress':
-            displayEmpressQuestions();
-            break;
-        case 'The Emperor':
-            displayEmperorQuestions();
-            break;
-        case 'The Hierophant':
-            displayHierophantQuestions();
-            break;
-        case 'The Lovers':
-            displayLoversQuestions();
-            break;
-        case 'The Chariot':
-            displayChariotQuestions();
-            break;
-        case 'Strength':
-            displayStrengthQuestions();
-            break;
-        case 'The Hermit':
-            displayHermitQuestions();
-            break;
-        case 'Wheel of Fortune':
-            displayWheelQuestions();
-            break;
-        case 'Justice':
-            displayJusticeQuestions();
-            break;
-        case 'The Hanged Man':
-            displayHangedQuestions();
-            break;
-        case 'Death':
-            displayDeathQuestions();
-            break;
-        case 'Temperance':
-            displayTemperanceQuestions();
-            break;
-        case 'The Devil':
-            displayDevilQuestions();
-            break;
-        case 'The Tower':
-            displayTowerQuestions();
-            break;
-        case 'The Star':
-            displayStarQuestions();
-            break;
-        case 'The Moon':
-            displayMoonQuestions();
-            break;
-        case 'The Sun':
-            displaySunQuestions();
-            break;
-        case 'Judgement':
-            displayJudgementQuestions();
-            break;
-        case 'The World':
-            displayWorldQuestions();
-            break;
+        cardNumReturn(cardNum); // Returns our card number outward through this function
+        card = cardArray[cardNum];
+
+    if (!cardsChosen.includes(card)) { // This if statement should ensure the game never gives you two of the same cards
+        
+        cardsChosen.push(card);
+
+        switch (card) {
+            case 'The Fool':
+                displayFoolQuestions();
+                break;
+            case 'The Magician':
+                displayMagicianQuestions();
+                break;
+            case 'The High Priestess':
+                displayPriestessQuestions();
+                break;
+            case 'The Empress':
+                displayEmpressQuestions();
+                break;
+            case 'The Emperor':
+                displayEmperorQuestions();
+                break;
+            case 'The Hierophant':
+                displayHierophantQuestions();
+                break;
+            case 'The Lovers':
+                displayLoversQuestions();
+                break;
+            case 'The Chariot':
+                displayChariotQuestions();
+                break;
+            case 'Strength':
+                displayStrengthQuestions();
+                break;
+            case 'The Hermit':
+                displayHermitQuestions();
+                break;
+            case 'Wheel of Fortune':
+                displayWheelQuestions();
+                break;
+            case 'Justice':
+                displayJusticeQuestions();
+                break;
+            case 'The Hanged Man':
+                displayHangedQuestions();
+                break;
+            case 'Death':
+                displayDeathQuestions();
+                break;
+            case 'Temperance':
+                displayTemperanceQuestions();
+                break;
+            case 'The Devil':
+                displayDevilQuestions();
+                break;
+            case 'The Tower':
+                displayTowerQuestions();
+                break;
+            case 'The Star':
+                displayStarQuestions();
+                break;
+            case 'The Moon':
+                displayMoonQuestions();
+                break;
+            case 'The Sun':
+                displaySunQuestions();
+                break;
+            case 'Judgement':
+                displayJudgementQuestions();
+                break;
+            case 'The World':
+                displayWorldQuestions();
+                break;
+        }
+    } else {
+        runGame();
     }
+    
+    
 };
 
 /**
@@ -131,8 +151,9 @@ function runGame() {
  */
 function checkAnswer(answerClicked) { // answerClicked takes over as the variable passed from the event listener above, this.innerHTML
     let answer = card;
-    console.log(answerClicked, card);
     let correct = answerClicked === answer;
+    ++counter;
+    console.log(answer);
 
     if (correct) {
         alert('You did it!');
@@ -143,6 +164,21 @@ function checkAnswer(answerClicked) { // answerClicked takes over as the variabl
 
     if (score < 7) {
         document.getElementById('next-btn').style.display="block";
+    }
+
+    if (counter === 7 && score < 7) {
+        document.getElementsByClassName('card')[cardNumber].style.display="none";
+        document.getElementsByClassName('q1')[0].style.display="none";
+        document.getElementsByClassName('q2')[0].style.display="none";
+        document.getElementsByClassName('q3')[0].style.display="none";
+        document.getElementsByClassName('q4')[0].style.display="none";  // Hides all main game content except for score
+        
+        document.getElementById('end-title').style.display="block";
+        document.getElementById('end-sentence').style.display="block";
+        document.getElementById('play-again').style.display="block";    // Shows all end game content
+
+        document.getElementById('end-title').innerHTML = "Great Score!"
+        document.getElementById('end-sentence').innerHTML = "Unfortunately, you did not guess all 7 cards correctly. Don't give up, and Try Again!"
     }
 }
 
