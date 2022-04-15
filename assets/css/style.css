@@ -92,6 +92,7 @@ body i {
 
 .card00 {
     background: url('../images/00-the-fool.jpg') no-repeat center center / contain;
+    display: none;
 }
 
 .card01 {
