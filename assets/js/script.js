@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById('end-title').style.display="none";
                 document.getElementById('end-sentence').style.display="none";
                 document.getElementById('play-again').style.display="none";
+                document.getElementById('score').innerHTML = score -= 7;
                 runGame();
             } else {
                 checkAnswer(this.innerHTML);
@@ -42,6 +43,10 @@ function runGame() {
 
     document.getElementById('next-btn').style.display="none"; // This gets rid of the "Next Card" button and brings back the card cover
     document.getElementById('cover').style.display='block';
+    document.getElementsByClassName('q1')[0].style.display="block";
+    document.getElementsByClassName('q2')[0].style.display="block";
+    document.getElementsByClassName('q3')[0].style.display="block";
+    document.getElementsByClassName('q4')[0].style.display="block";
 
     let cardArray = ['The Fool', 'The Magician', 'The High Priestess', 'The Empress', 'The Emperor', 'The Hierophant', 'The Lovers', 'The Chariot', 'Strength', 
     'The Hermit', 'Wheel of Fortune', 'Justice', 'The Hanged Man', 'Death', 'Temperance', 'The Devil', 'The Tower', 'The Star', 'The Moon', 'The Sun', 
@@ -151,7 +156,11 @@ function incrementScore() {
         document.getElementsByClassName('q1')[0].style.display="none";
         document.getElementsByClassName('q2')[0].style.display="none";
         document.getElementsByClassName('q3')[0].style.display="none";
-        document.getElementsByClassName('q4')[0].style.display="none";
+        document.getElementsByClassName('q4')[0].style.display="none";  // Hides all main game content except for score
+        
+        document.getElementById('end-title').style.display="block";
+        document.getElementById('end-sentence').style.display="block";
+        document.getElementById('play-again').style.display="block";    // Shows all end game content
     }
 }
 
