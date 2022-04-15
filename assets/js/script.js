@@ -6,8 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener('click', function() {
-            checkAnswer(this.innerHTML);
-            document.getElementById('cover').style.display='none'
+            if (this.getAttribute('data-type') === 'btnNext') {
+                runGame();
+            } else {
+                checkAnswer(this.innerHTML);
+                document.getElementById('cover').style.display='none';
+            }
         })
     }
 
@@ -18,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
  * Main game function, generates our random card, and displays the questions appropriately
  */
 function runGame() {
+
+    document.getElementById('next-btn').style.display="none"; // This gets rid of the "Next Card" button and brings back the card cover
+    document.getElementById('cover').style.display='block';
 
     let cardArray = ['The Fool', 'The Magician', 'The High Priestess', 'The Empress', 'The Emperor', 'The Hierophant', 'The Lovers', 'The Chariot', 'Strength', 
     'The Hermit', 'Wheel of Fortune', 'Justice', 'The Hanged Man', 'Death', 'Temperance', 'The Devil', 'The Tower', 'The Star', 'The Moon', 'The Sun', 
@@ -111,6 +118,8 @@ function checkAnswer(answerClicked) { // answerClicked takes over as the variabl
     } else {
         alert('Uh oh stinky!');
     }
+
+    document.getElementById('next-btn').style.display="block";
 }
 
 /**
