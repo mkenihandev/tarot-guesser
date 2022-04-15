@@ -68,6 +68,9 @@ function displayFoolQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Emperor';
 };
 
+/**
+ * Function for displaying the questions appropriate to I-The Magician
+ */
 function displayMagicianQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Magician';
     document.getElementsByClassName('q2')[0].textContent = 'The Emperor';
@@ -75,6 +78,9 @@ function displayMagicianQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Star';
 };
 
+/**
+ * Function for displaying the questions appropriate to II-The High Priestess
+ */
 function displayPriestessQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Tower';
     document.getElementsByClassName('q2')[0].textContent = 'The Empress';
@@ -82,6 +88,9 @@ function displayPriestessQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Emperor';
 };
 
+/**
+ * Function for displaying the questions appropriate to III-The Empress
+ */
 function displayEmpressQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The High Priestess';
     document.getElementsByClassName('q2')[0].textContent = 'The Emperor';
@@ -89,6 +98,9 @@ function displayEmpressQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Empress';
 };
 
+/**
+ * Function for displaying the questions appropriate to IV-The Emperor
+ */
 function displayEmperorQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Emperor';
     document.getElementsByClassName('q2')[0].textContent = 'The Devil';
@@ -96,6 +108,9 @@ function displayEmperorQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Hanged Man';
 };
 
+/**
+ * Function for displaying the questions appropriate to V-The Hierophant
+ */
 function displayHierophantQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Emperor';
     document.getElementsByClassName('q2')[0].textContent = 'The Hierophant';
@@ -103,6 +118,9 @@ function displayHierophantQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The High Priestess';
 };
 
+/**
+ * Function for displaying the questions appropriate to VI-The Lovers
+ */
 function displayLoversQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Devil';
     document.getElementsByClassName('q2')[0].textContent = 'The Sun';
@@ -110,6 +128,9 @@ function displayLoversQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The World';
 };
 
+/**
+ * Function for displaying the questions appropriate to VII-The Chariot
+ */
 function displayChariotQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Emperor';
     document.getElementsByClassName('q2')[0].textContent = 'Strength';
@@ -117,6 +138,9 @@ function displayChariotQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Chariot';
 };
 
+/**
+ * Function for displaying the questions appropriate to VIII-Strength
+ */
 function displayStrengthQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'Strength';
     document.getElementsByClassName('q2')[0].textContent = 'The Fool';
@@ -124,6 +148,9 @@ function displayStrengthQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Hierophant';
 };
 
+/**
+ * Function for displaying the questions appropriate to IX-The Hermit
+ */
 function displayHermitQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Hanged Man';
     document.getElementsByClassName('q2')[0].textContent = 'The Hermit';
@@ -131,6 +158,9 @@ function displayHermitQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Emperor';
 };
 
+/**
+ * Function for displaying the questions appropriate to X-Wheel of Fortune
+ */
 function displayWheelQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'Temperance';
     document.getElementsByClassName('q2')[0].textContent = 'The World';
@@ -138,6 +168,9 @@ function displayWheelQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Star';
 };
 
+/**
+ * Function for displaying the questions appropriate to XI-Justice
+ */
 function displayJusticeQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'Judgement';
     document.getElementsByClassName('q2')[0].textContent = 'The Star';
@@ -145,6 +178,9 @@ function displayJusticeQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'Justice';
 };
 
+/**
+ * Function for displaying the questions appropriate to XII-The Hanged Man
+ */
 function displayHangedQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Hanged Man';
     document.getElementsByClassName('q2')[0].textContent = 'Death';
@@ -152,6 +188,9 @@ function displayHangedQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'Judgement';
 };
 
+/**
+ * Function for displaying the questions appropriate to XIII-Death
+ */
 function displayDeathQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Devil';
     document.getElementsByClassName('q2')[0].textContent = 'Death';
@@ -159,6 +198,9 @@ function displayDeathQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Chariot';
 };
 
+/**
+ * Function for displaying the questions appropriate to XIV-Temperance
+ */
 function displayTemperanceQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Star';
     document.getElementsByClassName('q2')[0].textContent = 'The Hierophant';
@@ -166,6 +208,9 @@ function displayTemperanceQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Emperor';
 };
 
+/**
+ * Function for displaying the questions appropriate to XV-The Devil
+ */
 function displayDevilQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'Death';
     document.getElementsByClassName('q2')[0].textContent = 'Judgement';
@@ -173,6 +218,9 @@ function displayDevilQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Devil';
 };
 
+/**
+ * Function for displaying the questions appropriate to XVI-The Tower
+ */
 function displayTowerQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Tower';
     document.getElementsByClassName('q2')[0].textContent = 'Temperance';
@@ -180,6 +228,9 @@ function displayTowerQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'Death';
 };
 
+/**
+ * Function for displaying the questions appropriate to XVII-The Star
+ */
 function displayStarQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Sun';
     document.getElementsByClassName('q2')[0].textContent = 'The Star';
@@ -187,6 +238,9 @@ function displayStarQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'Strength';
 };
 
+/**
+ * Function for displaying the questions appropriate to XVIII-The Moon
+ */
 function displayMoonQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Star';
     document.getElementsByClassName('q2')[0].textContent = 'The Sun';
@@ -194,6 +248,9 @@ function displayMoonQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The World';
 };
 
+/**
+ * Function for displaying the questions appropriate to XIX-The Sun
+ */
 function displaySunQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Emperor';
     document.getElementsByClassName('q2')[0].textContent = 'The Star';
@@ -201,6 +258,9 @@ function displaySunQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'The Sun';
 };
 
+/**
+ * Function for displaying the questions appropriate to XX-Judgement
+ */
 function displayJudgementQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'Judgement';
     document.getElementsByClassName('q2')[0].textContent = 'The Temperance';
@@ -208,6 +268,9 @@ function displayJudgementQuestions() {
     document.getElementsByClassName('q4')[0].textContent = 'Wheel of Fortune';
 };
 
+/**
+ * Function for displaying the questions appropriate to XXI-The World
+ */
 function displayWorldQuestions() {
     document.getElementsByClassName('q1')[0].textContent = 'The Empress';
     document.getElementsByClassName('q2')[0].textContent = 'The World';
