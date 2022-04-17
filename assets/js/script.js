@@ -156,10 +156,10 @@ function checkAnswer(answerClicked) { // answerClicked takes over as the variabl
     console.log(answer);
 
     if (correct) {
-        alert('You did it!');
+        alert(`You guessed right! The card was "${card}"`);
         incrementScore();
     } else {
-        alert('Oh no! Wrong card!');
+        alert(`Oh no! That's the wrong guess. The card was "${card}"`);
     }
 
     if (score < 7) {

@@ -20,7 +20,7 @@
                 <ul>
                     <li id="logo"></li>
                     <li id="home">
-                        <a href="index.html">Home</a>
+                        <a href="index.html">Reset <i class="fa-solid fa-arrows-rotate"></i></a>
                     </li>
                 </ul>
             </nav>
@@ -56,18 +56,23 @@
 
             <p id="scoreP">Score: <span id="score">0</span>/7</p>
 
-            <button data-type="btnNext" id="next-btn">Next Card</button>
+            <!-- Next Button -->
 
-            <button data-type="btnQ" class="question q1">Question 1</button>
-            <button data-type="btnQ" class="question q2">Question 2</button>
-            <button data-type="btnQ" class="question q3">Question 3</button>
-            <button data-type="btnQ" class="question q4">Question 4</button>
+            <button data-type="btnNext" class="btn" id="next-btn">Next Card</button>
+
+            <!-- Question/Answer buttons -->
+
+            <button data-type="btnQ" class="btn question q1">Question 1</button>
+            <button data-type="btnQ" class="btn question q2">Question 2</button>
+            <button data-type="btnQ" class="btn question q3">Question 3</button>
+            <button data-type="btnQ" class="btn question q4">Question 4</button>
 
             <!-- Win/Loss screen divs -->
+
             <h2 id="end-title">You Won!</h2>
             <p id="end-sentence">Congratulations, you guessed all 7 cards right!</p>
 
-            <button data-type="btnAgain" id="play-again">Play Again?</button>
+            <button data-type="btnAgain" class="btn" id="play-again">Play Again?</button>
         </section>
 
         <!-- Footer -->
@@ -79,7 +84,10 @@
     </main>
 
     <!-- Scripts -->
+
     <script src="assets/js/script.js"></script>
+
+    <script src="https://kit.fontawesome.com/acd5f3ebfc.js" crossorigin="anonymous"></script>
     
 </body>
 </html>
