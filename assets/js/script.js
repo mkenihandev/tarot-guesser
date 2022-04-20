@@ -10,7 +10,7 @@ let counter = 0;
 
 /**
  * 
- * Takes the number of the random card number generated in runGame(); for use in hiding the div on next round
+ * Takes the number of the random card number generated in runGame(); and assigns it to the global variable for backwards use in event listeners below
  */
 function cardNumReturn(cardNum) {
     cardNumber = cardNum;
@@ -25,21 +25,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementsByClassName('card')[cardNumber].style.display="none";
                 runGame();
             } else if (this.getAttribute('data-type') === 'btnAgain') { // Resets everything, removes end game screen content
-                document.getElementById('end-title').style.display="none";
-                document.getElementById('end-sentence').style.display="none";
-                document.getElementById('play-again').style.display="none";
-                score = 0;
-                document.getElementById('score').innerHTML = score;
-                counter = 0;
-                cardsChosen = [];
+                playAgainReset();
                 runGame();
             } else {
                 checkAnswer(this.innerHTML);
-                document.getElementById('cover').style.display='none';
-                document.getElementsByClassName('q1')[0].style.display="none";
-                document.getElementsByClassName('q2')[0].style.display="none";
-                document.getElementsByClassName('q3')[0].style.display="none";
-                document.getElementsByClassName('q4')[0].style.display="none";
+                showAnswer();
             }
         })
     }
@@ -48,17 +38,45 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /**
- * Main game function, generates our random card, and displays the questions appropriately
+ * This function resets just about everything, by getting rid of the end screen elements and resetting the scores/hidden round counter
  */
-function runGame() {
+function playAgainReset() {
+    document.getElementById('end-title').style.display="none";
+    document.getElementById('end-sentence').style.display="none";
+    document.getElementById('play-again').style.display="none";
+    score = 0;
+    document.getElementById('score').innerHTML = score;
+    counter = 0;
+    cardsChosen = [];
+}
 
-    document.getElementById('next-btn').style.display="none"; // This gets rid of the "Next Card" button and brings back the card cover
+/**
+ * This function hides all the questions buttons, and removes the cover to show the user the card name
+ */
+function showAnswer() {
+    document.getElementById('cover').style.display='none';
+    document.getElementsByClassName('q1')[0].style.display="none";
+    document.getElementsByClassName('q2')[0].style.display="none";
+    document.getElementsByClassName('q3')[0].style.display="none";
+    document.getElementsByClassName('q4')[0].style.display="none";
+};
+
+/**
+ * This function gets rid of the "Next Card" button and brings back the card cover
+ */
+function nextCard() {
+    document.getElementById('next-btn').style.display="none";
     document.getElementById('cover').style.display='block';
     document.getElementsByClassName('q1')[0].style.display="block";
     document.getElementsByClassName('q2')[0].style.display="block";
     document.getElementsByClassName('q3')[0].style.display="block";
     document.getElementsByClassName('q4')[0].style.display="block";
+}
 
+/**
+ * This function generates our random card number and assigns the name to the global "card" variable
+ */
+function cardGen() {
     let cardArray = ['The Fool', 'The Magician', 'The High Priestess', 'The Empress', 'The Emperor', 'The Hierophant', 'The Lovers', 'The Chariot', 'Strength', 
     'The Hermit', 'Wheel of Fortune', 'Justice', 'The Hanged Man', 'Death', 'Temperance', 'The Devil', 'The Tower', 'The Star', 'The Moon', 'The Sun', 
     'Judgement', 'The World']
@@ -66,6 +84,16 @@ function runGame() {
     let cardNum = Math.floor(Math.random() * 22); // Generates our card number, from 0-21
         cardNumReturn(cardNum); // Returns our card number outward through this function
         card = cardArray[cardNum];
+}
+
+/**
+ * Main game function, generates our random card, and displays the questions appropriately
+ */
+function runGame() {
+
+    nextCard();
+
+    cardGen();
 
     if (!cardsChosen.includes(card)) { // This if statement should ensure the game never gives you two of the same cards
         
@@ -140,10 +168,8 @@ function runGame() {
                 break;
         }
     } else {
-        runGame();
+        runGame(); // This else is to loop back, runGame again, which generates a new number in the event that the previous card was the same
     }
-    
-    
 };
 
 /**
@@ -167,19 +193,33 @@ function checkAnswer(answerClicked) { // answerClicked takes over as the variabl
     }
 
     if (counter === 7 && score < 7) {
-        document.getElementsByClassName('card')[cardNumber].style.display="none";
-        document.getElementsByClassName('q1')[0].style.display="none";
-        document.getElementsByClassName('q2')[0].style.display="none";
-        document.getElementsByClassName('q3')[0].style.display="none";
-        document.getElementsByClassName('q4')[0].style.display="none";  // Hides all main game content except for score
-        
-        document.getElementById('end-title').style.display="block";
-        document.getElementById('end-sentence').style.display="block";
-        document.getElementById('play-again').style.display="block";    // Shows all end game content
-
-        document.getElementById('end-title').innerHTML = "Great Score!"
-        document.getElementById('end-sentence').innerHTML = "Unfortunately, you did not guess all 7 cards correctly. Don't give up, and Try Again!"
+        youLose();
     }
+}
+
+/**
+ * Displays the end game content after hiding the card and question buttons
+ */
+function youWin() {
+    document.getElementsByClassName('card')[cardNumber].style.display="none";
+    document.getElementsByClassName('q1')[0].style.display="none";
+    document.getElementsByClassName('q2')[0].style.display="none";
+    document.getElementsByClassName('q3')[0].style.display="none";
+    document.getElementsByClassName('q4')[0].style.display="none";  // Hides all main game content except for score
+        
+    document.getElementById('end-title').style.display="block";
+    document.getElementById('end-sentence').style.display="block";
+    document.getElementById('play-again').style.display="block";    // Shows all end game content
+}
+
+/**
+ * Calls youWin to bring up the end screen then changes the content to a loss condition
+ */
+function youLose() {
+    youWin();
+
+    document.getElementById('end-title').innerHTML = "Great Score!"
+    document.getElementById('end-sentence').innerHTML = "Unfortunately, you did not guess all 7 cards correctly. Don't give up, and Try Again!"
 }
 
 /**
@@ -188,15 +228,7 @@ function checkAnswer(answerClicked) { // answerClicked takes over as the variabl
 function incrementScore() {
     document.getElementById('score').innerHTML = ++score;
     if (score === 7) {
-        document.getElementsByClassName('card')[cardNumber].style.display="none";
-        document.getElementsByClassName('q1')[0].style.display="none";
-        document.getElementsByClassName('q2')[0].style.display="none";
-        document.getElementsByClassName('q3')[0].style.display="none";
-        document.getElementsByClassName('q4')[0].style.display="none";  // Hides all main game content except for score
-        
-        document.getElementById('end-title').style.display="block";
-        document.getElementById('end-sentence').style.display="block";
-        document.getElementById('play-again').style.display="block";    // Shows all end game content
+        youWin();
     }
 }
 
