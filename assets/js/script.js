@@ -73,70 +73,70 @@ function runGame() {
 
         switch (card) {
             case 'The Fool':
-                displayFoolQuestions();
+                displayQuestions(cardNumber, 'The Devil', 'The Fool', 'The Hermit', 'The Emperor');
                 break;
             case 'The Magician':
-                displayMagicianQuestions();
+                displayQuestions(cardNumber, 'The Magician', 'The Emperor', 'The Hierophant', 'The Star');
                 break;
             case 'The High Priestess':
-                displayPriestessQuestions();
+                displayQuestions(cardNumber, 'The Tower', 'The Empress', 'The High Priestess', 'The Emperor');
                 break;
             case 'The Empress':
-                displayEmpressQuestions();
+                displayQuestions(cardNumber, 'The High Priestess', 'The Emperor', 'Justice', 'The Empress');
                 break;
             case 'The Emperor':
-                displayEmperorQuestions();
+                displayQuestions(cardNumber, 'The Emperor', 'The Devil', 'Judgement', 'The Hanged Man');
                 break;
             case 'The Hierophant':
-                displayHierophantQuestions();
+                displayQuestions(cardNumber, 'The Emperor', 'The Hierophant', 'The Empress', 'The High Priestess');
                 break;
             case 'The Lovers':
-                displayLoversQuestions();
+                displayQuestions(cardNumber, 'The Devil', 'The Sun', 'The Lovers', 'The World');
                 break;
             case 'The Chariot':
-                displayChariotQuestions();
+                displayQuestions(cardNumber, 'The Emperor', 'Strength', 'The Tower', 'The Chariot');
                 break;
             case 'Strength':
-                displayStrengthQuestions();
+                displayQuestions(cardNumber, 'Strength', 'The Fool', 'Judgement', 'The Hierophant');
                 break;
             case 'The Hermit':
-                displayHermitQuestions();
+                displayQuestions(cardNumber, 'The Hanged Man', 'The Hermit', 'The Sun', 'The Emperor');
                 break;
             case 'Wheel of Fortune':
-                displayWheelQuestions();
+                displayQuestions(cardNumber, 'Temperance', 'The World', 'Wheel of Fortune', 'The Star');
                 break;
             case 'Justice':
-                displayJusticeQuestions();
+                displayQuestions(cardNumber, 'Judgement', 'The Star', 'The Emperor', 'Justice');
                 break;
             case 'The Hanged Man':
-                displayHangedQuestions();
+                displayQuestions(cardNumber, 'The Hanged Man', 'Death', 'The Fool', 'Judgement');
                 break;
             case 'Death':
-                displayDeathQuestions();
+                displayQuestions(cardNumber, 'The Devil', 'Death', 'Judgement', 'The Chariot');
                 break;
             case 'Temperance':
-                displayTemperanceQuestions();
+                displayQuestions(cardNumber, 'The Star', 'The Hierophant', 'Temperance', 'The Emperor');
                 break;
             case 'The Devil':
-                displayDevilQuestions();
+                displayQuestions(cardNumber, 'Death', 'Judgement', 'The Emperor', 'The Devil');
                 break;
             case 'The Tower':
-                displayTowerQuestions();
+                displayQuestions(cardNumber, 'The Tower', 'Temperance', 'The Lover', 'Death');
                 break;
             case 'The Star':
-                displayStarQuestions();
+                displayQuestions(cardNumber, 'The Sun', 'The Star', 'The World', 'Strength');
                 break;
             case 'The Moon':
-                displayMoonQuestions();
+                displayQuestions(cardNumber, 'The Star', 'The Sun', 'The Moon', 'The World');
                 break;
             case 'The Sun':
-                displaySunQuestions();
+                displayQuestions(cardNumber, 'The Emperor', 'The Star', 'The Empress', 'The Sun');
                 break;
             case 'Judgement':
-                displayJudgementQuestions();
+                displayQuestions(cardNumber, 'Judgement', 'Temperance', 'The World', 'Wheel of Fortune');
                 break;
             case 'The World':
-                displayWorldQuestions();
+                displayQuestions(cardNumber, 'The Empress', 'The World', 'The High Priestess', 'The Devil');
                 break;
         }
     } else {
@@ -201,243 +201,12 @@ function incrementScore() {
 }
 
 /**
- * Function for displaying the questions appropriate to 0-The Fool
+ * Function called to display each question, takes in parameters looking for the card number for use in indexing + all 4 question strings
  */
-function displayFoolQuestions() {
-    document.getElementsByClassName('card00')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Devil';
-    document.getElementsByClassName('q2')[0].textContent = 'The Fool';
-    document.getElementsByClassName('q3')[0].textContent = 'The Hermit';
-    document.getElementsByClassName('q4')[0].textContent = 'The Emperor';
-};
-
-/**
- * Function for displaying the questions appropriate to I-The Magician
- */
-function displayMagicianQuestions() {
-    document.getElementsByClassName('card01')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Magician';
-    document.getElementsByClassName('q2')[0].textContent = 'The Emperor';
-    document.getElementsByClassName('q3')[0].textContent = 'The Hierophant';
-    document.getElementsByClassName('q4')[0].textContent = 'The Star';
-};
-
-/**
- * Function for displaying the questions appropriate to II-The High Priestess
- */
-function displayPriestessQuestions() {
-    document.getElementsByClassName('card02')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Tower';
-    document.getElementsByClassName('q2')[0].textContent = 'The Empress';
-    document.getElementsByClassName('q3')[0].textContent = 'The High Priestess';
-    document.getElementsByClassName('q4')[0].textContent = 'The Emperor';
-};
-
-/**
- * Function for displaying the questions appropriate to III-The Empress
- */
-function displayEmpressQuestions() {
-    document.getElementsByClassName('card03')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The High Priestess';
-    document.getElementsByClassName('q2')[0].textContent = 'The Emperor';
-    document.getElementsByClassName('q3')[0].textContent = 'Justice';
-    document.getElementsByClassName('q4')[0].textContent = 'The Empress';
-};
-
-/**
- * Function for displaying the questions appropriate to IV-The Emperor
- */
-function displayEmperorQuestions() {
-    document.getElementsByClassName('card04')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Emperor';
-    document.getElementsByClassName('q2')[0].textContent = 'The Devil';
-    document.getElementsByClassName('q3')[0].textContent = 'Judgement';
-    document.getElementsByClassName('q4')[0].textContent = 'The Hanged Man';
-};
-
-/**
- * Function for displaying the questions appropriate to V-The Hierophant
- */
-function displayHierophantQuestions() {
-    document.getElementsByClassName('card05')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Emperor';
-    document.getElementsByClassName('q2')[0].textContent = 'The Hierophant';
-    document.getElementsByClassName('q3')[0].textContent = 'The Empress';
-    document.getElementsByClassName('q4')[0].textContent = 'The High Priestess';
-};
-
-/**
- * Function for displaying the questions appropriate to VI-The Lovers
- */
-function displayLoversQuestions() {
-    document.getElementsByClassName('card06')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Devil';
-    document.getElementsByClassName('q2')[0].textContent = 'The Sun';
-    document.getElementsByClassName('q3')[0].textContent = 'The Lovers';
-    document.getElementsByClassName('q4')[0].textContent = 'The World';
-};
-
-/**
- * Function for displaying the questions appropriate to VII-The Chariot
- */
-function displayChariotQuestions() {
-    document.getElementsByClassName('card07')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Emperor';
-    document.getElementsByClassName('q2')[0].textContent = 'Strength';
-    document.getElementsByClassName('q3')[0].textContent = 'The Tower';
-    document.getElementsByClassName('q4')[0].textContent = 'The Chariot';
-};
-
-/**
- * Function for displaying the questions appropriate to VIII-Strength
- */
-function displayStrengthQuestions() {
-    document.getElementsByClassName('card08')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'Strength';
-    document.getElementsByClassName('q2')[0].textContent = 'The Fool';
-    document.getElementsByClassName('q3')[0].textContent = 'Judgement';
-    document.getElementsByClassName('q4')[0].textContent = 'The Hierophant';
-};
-
-/**
- * Function for displaying the questions appropriate to IX-The Hermit
- */
-function displayHermitQuestions() {
-    document.getElementsByClassName('card09')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Hanged Man';
-    document.getElementsByClassName('q2')[0].textContent = 'The Hermit';
-    document.getElementsByClassName('q3')[0].textContent = 'The Sun';
-    document.getElementsByClassName('q4')[0].textContent = 'The Emperor';
-};
-
-/**
- * Function for displaying the questions appropriate to X-Wheel of Fortune
- */
-function displayWheelQuestions() {
-    document.getElementsByClassName('card10')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'Temperance';
-    document.getElementsByClassName('q2')[0].textContent = 'The World';
-    document.getElementsByClassName('q3')[0].textContent = 'Wheel of Fortune';
-    document.getElementsByClassName('q4')[0].textContent = 'The Star';
-};
-
-/**
- * Function for displaying the questions appropriate to XI-Justice
- */
-function displayJusticeQuestions() {
-    document.getElementsByClassName('card11')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'Judgement';
-    document.getElementsByClassName('q2')[0].textContent = 'The Star';
-    document.getElementsByClassName('q3')[0].textContent = 'The Emperor';
-    document.getElementsByClassName('q4')[0].textContent = 'Justice';
-};
-
-/**
- * Function for displaying the questions appropriate to XII-The Hanged Man
- */
-function displayHangedQuestions() {
-    document.getElementsByClassName('card12')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Hanged Man';
-    document.getElementsByClassName('q2')[0].textContent = 'Death';
-    document.getElementsByClassName('q3')[0].textContent = 'The Fool';
-    document.getElementsByClassName('q4')[0].textContent = 'Judgement';
-};
-
-/**
- * Function for displaying the questions appropriate to XIII-Death
- */
-function displayDeathQuestions() {
-    document.getElementsByClassName('card13')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Devil';
-    document.getElementsByClassName('q2')[0].textContent = 'Death';
-    document.getElementsByClassName('q3')[0].textContent = 'Judgement';
-    document.getElementsByClassName('q4')[0].textContent = 'The Chariot';
-};
-
-/**
- * Function for displaying the questions appropriate to XIV-Temperance
- */
-function displayTemperanceQuestions() {
-    document.getElementsByClassName('card14')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Star';
-    document.getElementsByClassName('q2')[0].textContent = 'The Hierophant';
-    document.getElementsByClassName('q3')[0].textContent = 'Temperance';
-    document.getElementsByClassName('q4')[0].textContent = 'The Emperor';
-};
-
-/**
- * Function for displaying the questions appropriate to XV-The Devil
- */
-function displayDevilQuestions() {
-    document.getElementsByClassName('card15')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'Death';
-    document.getElementsByClassName('q2')[0].textContent = 'Judgement';
-    document.getElementsByClassName('q3')[0].textContent = 'The Emperor';
-    document.getElementsByClassName('q4')[0].textContent = 'The Devil';
-};
-
-/**
- * Function for displaying the questions appropriate to XVI-The Tower
- */
-function displayTowerQuestions() {
-    document.getElementsByClassName('card16')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Tower';
-    document.getElementsByClassName('q2')[0].textContent = 'Temperance';
-    document.getElementsByClassName('q3')[0].textContent = 'The Lovers';
-    document.getElementsByClassName('q4')[0].textContent = 'Death';
-};
-
-/**
- * Function for displaying the questions appropriate to XVII-The Star
- */
-function displayStarQuestions() {
-    document.getElementsByClassName('card17')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Sun';
-    document.getElementsByClassName('q2')[0].textContent = 'The Star';
-    document.getElementsByClassName('q3')[0].textContent = 'The World';
-    document.getElementsByClassName('q4')[0].textContent = 'Strength';
-};
-
-/**
- * Function for displaying the questions appropriate to XVIII-The Moon
- */
-function displayMoonQuestions() {
-    document.getElementsByClassName('card18')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Star';
-    document.getElementsByClassName('q2')[0].textContent = 'The Sun';
-    document.getElementsByClassName('q3')[0].textContent = 'The Moon';
-    document.getElementsByClassName('q4')[0].textContent = 'The World';
-};
-
-/**
- * Function for displaying the questions appropriate to XIX-The Sun
- */
-function displaySunQuestions() {
-    document.getElementsByClassName('card19')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Emperor';
-    document.getElementsByClassName('q2')[0].textContent = 'The Star';
-    document.getElementsByClassName('q3')[0].textContent = 'The Empress';
-    document.getElementsByClassName('q4')[0].textContent = 'The Sun';
-};
-
-/**
- * Function for displaying the questions appropriate to XX-Judgement
- */
-function displayJudgementQuestions() {
-    document.getElementsByClassName('card20')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'Judgement';
-    document.getElementsByClassName('q2')[0].textContent = 'The Temperance';
-    document.getElementsByClassName('q3')[0].textContent = 'The World';
-    document.getElementsByClassName('q4')[0].textContent = 'Wheel of Fortune';
-};
-
-/**
- * Function for displaying the questions appropriate to XXI-The World
- */
-function displayWorldQuestions() {
-    document.getElementsByClassName('card21')[0].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = 'The Empress';
-    document.getElementsByClassName('q2')[0].textContent = 'The World';
-    document.getElementsByClassName('q3')[0].textContent = 'The High Priestess';
-    document.getElementsByClassName('q4')[0].textContent = 'The Devil';
+function displayQuestions(cardVar, quest1, quest2, quest3, quest4) {
+    document.getElementsByClassName('card')[cardVar].style.display="block";
+    document.getElementsByClassName('q1')[0].textContent = quest1;
+    document.getElementsByClassName('q2')[0].textContent = quest2;
+    document.getElementsByClassName('q3')[0].textContent = quest3;
+    document.getElementsByClassName('q4')[0].textContent = quest4;
 };
