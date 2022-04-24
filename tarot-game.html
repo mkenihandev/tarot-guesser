@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Tarot Guesser</title>
+</head>
+<body>
+
+    <main>
+
+        <!-- Header -->
+
+        <header>
+            <nav>
+                <ul>
+                    <li id="logo"></li>
+                    <li id="home">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li id="reset">
+                        <a href="tarot-game.html">Reset <i class="fa-solid fa-arrows-rotate"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Game area -->
+
+        <section id="game-area"> 
+            <div class="card card00"></div>
+            <div class="card card01"></div>
+            <div class="card card02"></div>
+            <div class="card card03"></div>
+            <div class="card card04"></div>
+            <div class="card card05"></div>
+            <div class="card card06"></div>
+            <div class="card card07"></div>
+            <div class="card card08"></div>
+            <div class="card card09"></div>
+            <div class="card card10"></div>
+            <div class="card card11"></div>
+            <div class="card card12"></div>
+            <div class="card card13"></div>
+            <div class="card card14"></div>
+            <div class="card card15"></div>
+            <div class="card card16"></div>
+            <div class="card card17"></div>
+            <div class="card card18"></div>
+            <div class="card card19"></div>
+            <div class="card card20"></div>
+            <div class="card card21"></div>
+
+            <div id="cover"></div>
+
+            <p id="scoreP">Score: <span id="score">0</span>/7</p>
+
+            <!-- Next Button -->
+
+            <button data-type="btnNext" class="btn" id="next-btn">Next Card</button>
+
+            <!-- Question/Answer buttons -->
+
+            <button data-type="btnQ" class="btn question q1">Question 1</button>
+            <button data-type="btnQ" class="btn question q2">Question 2</button>
+            <button data-type="btnQ" class="btn question q3">Question 3</button>
+            <button data-type="btnQ" class="btn question q4">Question 4</button>
+
+            <!-- Win/Loss screen divs -->
+
+            <h2 id="end-title">You Won!</h2>
+            <p id="end-sentence">Congratulations, you guessed all 7 cards right!</p>
+
+            <button data-type="btnAgain" class="btn" id="play-again">Play Again?</button>
+        </section>
+
+        <!-- Footer -->
+
+        <footer>
+            
+        </footer>
+        
+    </main>
+
+    <!-- Scripts -->
+
+    <script src="assets/js/script.js"></script>
+
+    <script src="https://kit.fontawesome.com/acd5f3ebfc.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>

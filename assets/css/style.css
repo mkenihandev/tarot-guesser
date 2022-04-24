@@ -15,11 +15,6 @@ body {
 
 header {
     height: 8vh;
-    background-color: #4290E8;
-    margin: 12px auto; 
-    border-radius: 20px;
-    font-size: 120%;
-    width: 20vw;
 }
 
 header i {
@@ -43,13 +38,33 @@ a:hover {
     text-decoration: underline;
 }
 
+#reset {
+    height: 8vh;
+    background-color: #4290E8;
+    margin: 12px auto; 
+    border-radius: 20px;
+    font-size: 120%;
+    width: 20vw;
+    display: inline-block;
+}
+
+#home {
+    height: 8vh;
+    background-color: #4290E8;
+    margin: 12px auto; 
+    border-radius: 20px;
+    font-size: 120%;
+    width: 20vw;
+    display: inline-block;
+}
+
 /* ---------------------------------------------------------Game Area Style---------------------------------------------------------  */
 
 #game-area {
     display: grid;
     grid-template-columns: 1rem 1fr 20vw 1fr 1rem;
     grid-template-rows: 60% 20% 20%;
-    margin: 0 auto;
+    margin: 20px auto;
     background-color: #4290E8;
     border-radius: 20px;
     width: 75vw;
