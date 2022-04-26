@@ -1,3 +1,17 @@
+# Tarot Guesser Table of Contents
+
+- [Tarot Guesser](#tarot-guesser)
+
+- [Initial UX Goals and Designs](#initial-ux-goals-and-designs)
+
+- [Features of the Website](#features-of-the-website)
+
+- [Testing and Bug Solving](#testing-and-bug-solving)
+
+- [Deployment](#deployment)
+
+- [Credits](#credits)
+
 # Tarot Guesser
 
 [Insert image of website mockup]
@@ -8,7 +22,7 @@ of guessing which Tarot Card is which. This can be used as a fun and educational
 The targets of this website and game were to be people who have a mild or major interest in the Tarot Deck and are looking for something fun to do relative to their 
 interests. As an aside this can be used as an entertaining way to learn and stay fresh on the cards, their numbers, and depictions.
 
-## Inception and Initial UX Goals/Designs
+## Initial UX Goals and Designs
 <hr>
 
 <img src="assets/images/readme-images/wireframe1.PNG" width="1000">
@@ -34,6 +48,15 @@ This was a mockup of the win screen, the user has gotten all 7 (6 during the tim
 This mobile mockup was just to envision how I would go about laying out the question buttons on a mobile screen. I initially was going to keep them 2 x 2 but with some of the longer named cards it was easier to just display them vertically.
 
 The website areas of this mockup were generally not as important as the game mockup, however I figured a simple design with social links in the footer, an icon of a tarot card in the top left and maybe a home link so the user could bring themselves back to the first game state again would suffice.
+
+## Features of the Website
+<hr>
+
+* **Navigation Bar**
+
+* **Landing Page**
+
+* **Game Page**
 
 ## Testing and Bug Solving
 <hr>
