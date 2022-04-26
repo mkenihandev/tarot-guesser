@@ -31,6 +31,30 @@ This was a mockup of the win screen, the user has gotten all 7 (6 during the tim
 
 The website areas of this mockup were generally not as important as the game mockup, however I figured a simple design with social links in the footer, an icon of a tarot card in the top left and maybe a home link so the user could bring themselves back to the first game state again would suffice.
 
+## Testing and Bug Solving
+<hr>
+
+* **Bugs I solved** 
+    * Going through the JavaScript code with my mentor we realized the function responsible for incrementing the score had reduntant code for adding the score and counter
+        * Solved by simply removing the redundant code and moving it appropriately to its own function
+
+    * There were a lot of repeat functions with essentially the exact same code, designed to display X cards questions.
+        * Fixed by creating a "displayQuestions" functions that simply takes the parameters of the card instead
+
+    * Upon testing the responsiveness of the site, I noticed on a game win/loss the "Next Card" button and "Play again" button were still displaying when only the "Play again" button should have been. This was due to the fact the "Next Card" button is never actually hidden on a game win/loss, it is simply overlapped by "Play again".
+        * Solved by adding an entry to remove the "Next Card" button on the end screen function.
+
+* **Validation Testing**
+
+    * HTML
+        * There were no errors when validated on [W3C Validator](#)
+
+    * CSS
+        * There were no errors when passed through the [Jigsaw W3C Validation Service](#)
+
+    * Accessibility 
+        * The site was run through both desktop and mobile Lighthouse and scored above # in every section.
+
 ## Deployment
 <hr>
 
