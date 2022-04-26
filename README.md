@@ -29,6 +29,10 @@ This was a simple mockup for if the user had gotten some guesses correct, showin
 
 This was a mockup of the win screen, the user has gotten all 7 (6 during the time of making the mockup) cards correct and is congratulated for it. They are still asked if they would like to play again, to continue learning the cards.
 
+<img src="assets/images/readme-images/mobilewireframe1.PNG" width="1000">
+
+This mobile mockup was just to envision how I would go about laying out the question buttons on a mobile screen. I initially was going to keep them 2 x 2 but with some of the longer named cards it was easier to just display them vertically.
+
 The website areas of this mockup were generally not as important as the game mockup, however I figured a simple design with social links in the footer, an icon of a tarot card in the top left and maybe a home link so the user could bring themselves back to the first game state again would suffice.
 
 ## Testing and Bug Solving
