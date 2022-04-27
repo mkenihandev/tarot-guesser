@@ -31,7 +31,7 @@ header a {
     text-decoration: none;
     font-weight: bold;
     position: relative;
-    top: 25px;
+    top: 1.56rem;
 }
 
 header a:hover {
@@ -41,8 +41,8 @@ header a:hover {
 #reset {
     height: 8vh;
     background-color: #4290E8;
-    margin: 12px auto; 
-    border-radius: 20px;
+    margin: 0.75rem auto; 
+    border-radius: 1.25rem;
     font-size: 120%;
     width: 20vw;
     display: inline-block;
@@ -51,8 +51,8 @@ header a:hover {
 #home {
     height: 8vh;
     background-color: #4290E8;
-    margin: 12px auto; 
-    border-radius: 20px;
+    margin: 0.75rem auto; 
+    border-radius: 1.25rem;
     font-size: 120%;
     width: 20vw;
     display: inline-block;
@@ -64,13 +64,13 @@ header a:hover {
     display: grid;
     grid-template-columns: 1rem 45% 45% 1rem;
     grid-template-rows: 85% 15%;
-    margin: 20px auto;
+    margin: 1.25rem auto;
     background-color: #4290E8;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     width: 75vw;
     height: 75vh;
     padding: 2vw;
-    gap: 20px;
+    gap: 1.25rem;
     justify-items: center;
 }
 
@@ -109,14 +109,14 @@ header a:hover {
     display: grid;
     grid-template-columns: 1rem 1fr 20vw 1fr 1rem;
     grid-template-rows: 60% 20% 20%;
-    margin: 20px auto;
+    margin: 1.25rem auto;
     background-color: #4290E8;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     width: 75vw;
     height: 75vh;
     min-height: 50vh;
-    padding: 20px;
-    gap: 20px;
+    padding: 1.25rem;
+    gap: 1.25rem;
     justify-items: center;
 }
 
@@ -389,7 +389,7 @@ header a:hover {
 
     #game-area {
         grid-template-columns: 0.5vw 1fr 0.5vw;
-        grid-row: 50vh min-content 20vh 20vh 20vh 20vh;
+        grid-template-rows: 2fr min-content min-content min-content min-content min-content;
         height: min-content;
         justify-content: center;
     }
@@ -397,7 +397,7 @@ header a:hover {
     .card {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
-        min-height: 50vh;
+        min-height: 40vh;
         margin: 0 auto;
     }
     
@@ -425,6 +425,8 @@ header a:hover {
     
     #end-sentence {
         grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        height: min-content;
     }
 
     /* ---- Buttons ---- */
