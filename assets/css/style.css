@@ -167,6 +167,18 @@ header a:hover {
     color: #0D1F38;
 }
 
+#wrong-right {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    font-size: 150%;
+    font-weight: bold;
+    height: 50px;
+    width: 20vw;
+    min-height: min-content;
+    min-width: min-content;
+    display: none;
+}
+
 /* ---------------------------------------------------------Win/Loss Screen Styling---------------------------------------------------------  */
 
 #end-title {
@@ -376,7 +388,7 @@ header a:hover {
 
     #game-area {
         grid-template-columns: 0.5vw 1fr 0.5vw;
-        grid-row: 50vh 20vh 20vh 20vh 20vh 20vh;
+        grid-row: 50vh min-content 20vh 20vh 20vh 20vh;
         height: min-content;
         justify-content: center;
     }
@@ -397,6 +409,14 @@ header a:hover {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
+
+    #wrong-right {
+        grid-column: 2 / 3;
+        height: min-content;
+        width: 10vw;
+    }
+
+    /* ---- Buttons ---- */
     
     #next-btn {
         grid-column: 2 / 3;

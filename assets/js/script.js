@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener('click', function() {
             if (this.getAttribute('data-type') === 'btnNext') {
+                document.getElementById('scoreP').style.display='block';
+                document.getElementById('wrong-right').style.display='none';
                 document.getElementsByClassName('card')[cardNumber].style.display="none";
                 runGame();
             } else if (this.getAttribute('data-type') === 'btnAgain') { // Resets everything, removes end game screen content
@@ -179,13 +181,12 @@ function checkAnswer(answerClicked) { // answerClicked takes over as the variabl
     let answer = card;
     let correct = answerClicked === answer;
     ++counter;
-    console.log(answer);
+    console.log(correct);
 
-    if (correct) {
-        alert(`You guessed right! The card was "${card}"`);
-        incrementScore();
-    } else {
-        alert(`Oh no! That's the wrong guess. The card was "${card}"`);
+    checkGuess(correct);
+
+    if (score === 7) {
+        youWin();
     }
 
     if (score < 7) {
@@ -197,11 +198,30 @@ function checkAnswer(answerClicked) { // answerClicked takes over as the variabl
     }
 }
 
+
+/**
+ * 
+ * Displays and changes the correct/incorrect text after a user guesses
+ */
+function checkGuess(cardGuess) {
+    if (cardGuess === true) {
+        document.getElementById('scoreP').style.display='none';
+        document.getElementById('wrong-right').style.display='block';
+        document.getElementById('wrong-right').innerHTML=`Correct! Your card was "${card}"`;
+        incrementScore();
+    } else {
+        document.getElementById('scoreP').style.display='none';
+        document.getElementById('wrong-right').style.display='block';
+        document.getElementById('wrong-right').innerHTML=`That's wrong :( Your card was "${card}"`;
+    }
+}
+
 /**
  * Displays the end game content after hiding the card and question buttons
  */
 function youWin() {
     document.getElementsByClassName('card')[cardNumber].style.display="none";
+    document.getElementById('next-btn').style.display="none";
     document.getElementsByClassName('q1')[0].style.display="none";
     document.getElementsByClassName('q2')[0].style.display="none";
     document.getElementsByClassName('q3')[0].style.display="none";
@@ -227,9 +247,6 @@ function youLose() {
  */
 function incrementScore() {
     document.getElementById('score').innerHTML = ++score;
-    if (score === 7) {
-        youWin();
-    }
 }
 
 /**
