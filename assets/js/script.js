@@ -198,7 +198,6 @@ function checkAnswer(answerClicked) { // answerClicked takes over as the variabl
     }
 }
 
-
 /**
  * 
  * Displays and changes the correct/incorrect text after a user guesses
