@@ -71,6 +71,9 @@ The website areas of this mockup were generally not as important as the game moc
     * Upon testing the responsiveness of the site, I noticed on a game win/loss the "Next Card" button and "Play again" button were still displaying when only the "Play again" button should have been. This was due to the fact the "Next Card" button is never actually hidden on a game win/loss, it is simply overlapped by "Play again".
         * Solved by adding an entry to remove the "Next Card" button on the end screen function.
 
+    * The game section of the website was displaying incorrectly on other browsers (Safari, Chrome), buttons were hanging way outside the game area and more
+        * Solved by discovering "grid-row" instead of "grid-template-rows" in the responsive styling, Firefox was displaying correctly despite this so it went undiscovered for a while.
+
 * **Validation Testing**
 
     * HTML
