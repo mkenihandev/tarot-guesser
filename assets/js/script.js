@@ -219,8 +219,10 @@ function checkGuess(cardGuess) {
  * Displays the end game content after hiding the card and question buttons
  */
 function youWin() {
+    document.getElementById('wrong-right').style.display='none';
     document.getElementsByClassName('card')[cardNumber].style.display="none";
     document.getElementById('next-btn').style.display="none";
+
     document.getElementsByClassName('q1')[0].style.display="none";
     document.getElementsByClassName('q2')[0].style.display="none";
     document.getElementsByClassName('q3')[0].style.display="none";
