@@ -25,25 +25,25 @@ interests. As an aside this can be used as an entertaining way to learn and stay
 ## Initial UX Goals and Designs
 <hr>
 
-<img src="assets/images/readme-images/wireframe1.PNG" width="1000">
+<img src="wireframes/wireframe1.PNG" width="1000">
 
 To start with I knew I wanted some kind of guessing game. After speaking with my mentor we narrowed it down to a Tarot Guessing game that I had particular interest in because I just think they're visually descriptive enough to give a good guess as to what it is. I knew I wanted a main game area (purple) in which the card, questions and score would be located, in the center of the page.
 
 I wanted the answers to be pre-determined, that way I could lay out a selection of answers that are plausible for the card "drawn" so to speak. I considered using photoshop to completely get rid of the cards name on the image, however decided hiding it with a div might be more fun, that way when the user guesses, the div can disappear and show them whether they were right or wrong.
 
-<img src="assets/images/readme-images/wireframe2.PNG" width="1000">
+<img src="wireframes/wireframe2.PNG" width="1000">
 
 When the user guesses correctly or incorrectly, I wanted the answer to be highlighted in green, and the wrong ones highlighted in red. The previously mentioned div would be removed to show the user what card it was, as well as an alert or text on the page telling them "Correct" or "Incorrect". Aside from this I wanted to keep a score, incrementing by 1 every time the user guesses correctly, and staying put if incorrect. I initially wanted 6 cards drawn randomly with the aim of getting all 6 correct to "Win" however decided on 7 later as it divides nicer in to the 21 Major Arcana of Tarot cards.
 
-<img src="assets/images/readme-images/wireframe3.PNG" width="1000">
+<img src="wireframes/wireframe3.PNG" width="1000">
 
 This was a simple mockup for if the user had gotten some guesses correct, showing their final score, but not all of the cards correct. The aim was to have them keep playing until they were familiar with the cards. The button "Play Again?" should bring you back to the main game to try again.
 
-<img src="assets/images/readme-images/wireframe4.PNG" width="1000">
+<img src="wireframes/wireframe4.PNG" width="1000">
 
 This was a mockup of the win screen, the user has gotten all 7 (6 during the time of making the mockup) cards correct and is congratulated for it. They are still asked if they would like to play again, to continue learning the cards.
 
-<img src="assets/images/readme-images/mobilewireframe1.PNG" width="1000">
+<img src="wireframes/mobilewireframe1.PNG" width="1000">
 
 This mobile mockup was just to envision how I would go about laying out the question buttons on a mobile screen. I initially was going to keep them 2 x 2 but with some of the longer named cards it was easier to just display them vertically.
 
@@ -92,14 +92,14 @@ This website was deployed to GitHub pages. The link can be found here: (pages li
 
 **To clone this repository:**
 
-* Go to the top of the page and click "Fork" in the top right ![Image of fork button](assets/images/readme-images/fork.PNG) 
+* Go to the top of the page and click "Fork" in the top right ![Image of fork button](readme-images/fork.PNG) 
 * Or by clicking "Code" at the top of the repository then copying the URL 
 * Use ```git clone url``` in your Git Bash. 
 
 **To deploy this site locally:** 
 
 * Sign up to https://gitpod.io/ and install the extension for your browser. 
-* After this is done you can click the "Gitpod" button at the top of this repository ![Image of Gitpod button](assets/images/readme-images/gitpod.PNG) 
+* After this is done you can click the "Gitpod" button at the top of this repository ![Image of Gitpod button](readme-images/gitpod.PNG) 
 * This will automatically set up a new workspace for you.
 
 **To deploy this site remotely:**
