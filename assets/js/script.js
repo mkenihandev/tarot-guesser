@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 checkAnswer(this.innerHTML);
                 showAnswer();
             }
-        })
+        });
     }
 
     runGame();
@@ -61,7 +61,7 @@ function showAnswer() {
     document.getElementsByClassName('q2')[0].style.display="none";
     document.getElementsByClassName('q3')[0].style.display="none";
     document.getElementsByClassName('q4')[0].style.display="none";
-};
+}
 
 /**
  * This function gets rid of the "Next Card" button and brings back the card cover
@@ -81,7 +81,7 @@ function nextCard() {
 function cardGen() {
     let cardArray = ['The Fool', 'The Magician', 'The High Priestess', 'The Empress', 'The Emperor', 'The Hierophant', 'The Lovers', 'The Chariot', 'Strength', 
     'The Hermit', 'Wheel of Fortune', 'Justice', 'The Hanged Man', 'Death', 'Temperance', 'The Devil', 'The Tower', 'The Star', 'The Moon', 'The Sun', 
-    'Judgement', 'The World']
+    'Judgement', 'The World'];
 
     let cardNum = Math.floor(Math.random() * 22); // Generates our card number, from 0-21
         cardNumReturn(cardNum); // Returns our card number outward through this function
@@ -89,15 +89,21 @@ function cardGen() {
 }
 
 /**
- * Main game function, generates our random card, and displays the questions appropriately
+ * Function called to display each question, takes in parameters looking for the card number for use in indexing + all 4 question strings
  */
-function runGame() {
+ function displayQuestions(cardVar, quest1, quest2, quest3, quest4) {
+    document.getElementsByClassName('card')[cardVar].style.display="block";
+    document.getElementsByClassName('q1')[0].textContent = quest1;
+    document.getElementsByClassName('q2')[0].textContent = quest2;
+    document.getElementsByClassName('q3')[0].textContent = quest3;
+    document.getElementsByClassName('q4')[0].textContent = quest4;
+}
 
-    nextCard();
-
-    cardGen();
-
-    if (!cardsChosen.includes(card)) { // This if statement should ensure the game never gives you two of the same cards
+/**
+ * Takes in the card chosen in cardGen and decides our questions for us after ensuring it's not the same as the previous card
+ */
+function decideQuestions() {
+    if (!cardsChosen.includes(card)) {
         
         cardsChosen.push(card);
 
@@ -172,7 +178,19 @@ function runGame() {
     } else {
         runGame(); // This else is to loop back, runGame again, which generates a new number in the event that the previous card was the same
     }
-};
+}
+
+/**
+ * Main game function, generates our random card, and displays the questions appropriately
+ */
+function runGame() {
+
+    nextCard();
+
+    cardGen();
+
+    decideQuestions();
+}
 
 /**
  * Takes this.innerHTML from the button the user clicks and checks it against the global card variable
@@ -203,7 +221,7 @@ function checkAnswer(answerClicked) { // answerClicked takes over as the variabl
  * Displays and changes the correct/incorrect text after a user guesses
  */
 function checkGuess(cardGuess) {
-    if (cardGuess === true) {
+    if (cardGuess) {
         document.getElementById('scoreP').style.display='none';
         document.getElementById('wrong-right').style.display='block';
         document.getElementById('wrong-right').innerHTML=`Correct! Your card was "${card}"`;
@@ -239,8 +257,8 @@ function youWin() {
 function youLose() {
     youWin();
 
-    document.getElementById('end-title').innerHTML = "Great Score!"
-    document.getElementById('end-sentence').innerHTML = "Unfortunately, you did not guess all 7 cards correctly. Don't give up, and Try Again!"
+    document.getElementById('end-title').innerHTML = "Great Score!";
+    document.getElementById('end-sentence').innerHTML = "Unfortunately, you did not guess all 7 cards correctly. Don't give up, and Try Again!";
 }
 
 /**
@@ -249,14 +267,3 @@ function youLose() {
 function incrementScore() {
     document.getElementById('score').innerHTML = ++score;
 }
-
-/**
- * Function called to display each question, takes in parameters looking for the card number for use in indexing + all 4 question strings
- */
-function displayQuestions(cardVar, quest1, quest2, quest3, quest4) {
-    document.getElementsByClassName('card')[cardVar].style.display="block";
-    document.getElementsByClassName('q1')[0].textContent = quest1;
-    document.getElementsByClassName('q2')[0].textContent = quest2;
-    document.getElementsByClassName('q3')[0].textContent = quest3;
-    document.getElementsByClassName('q4')[0].textContent = quest4;
-};
