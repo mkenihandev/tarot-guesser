@@ -14,7 +14,7 @@
 
 # Tarot Guesser
 
-[Insert image of website mockup]
+<img src="readme-images/tarot-mockup.PNG">
 
 The Tarot Guesser game was designed in line with Code Institutes Project Portfolio 2's guidelines and aimed at people looking to play a fun game
 of guessing which Tarot Card is which. This can be used as a fun and educational way to learn the Major Arcana of the vast Tarot deck.
