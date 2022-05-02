@@ -54,9 +54,41 @@ The website areas of this mockup were generally not as important as the game moc
 
 * **Navigation Bar**
 
+    * The Navbar is simple and holds two links, one to the index page and another to the game.
+    * The Navbar changes when you are currently on the game page, and instead says "Reset" instead of "Tarot Game". It still functions the exact same, however alerts the user to another functionality of refreshing the page, which is resetting the game.
+
+<img src="readme-images/navbar-home.PNG">
+
+Navbar while on the landing page
+
+<img src="readme-images/navbar-game.PNG">
+
+Navbar while on the game page
+
 * **Landing Page**
 
+    * The Landing Page is host to two different pieces. First being the information about the website and the second is an example of a Tarot Card.
+    * The information tells the user what the website is about, the rules of the game and what a Tarot Card actually is.
+    * The example image of a Tarot Card gives the user a chance to learn what a Tarot Card looks like, and how it is laid out between the roman numeral of the card and the name itself.
+
+<img src="readme-images/tarot-about.PNG"> <img src="readme-images/tarot-example.PNG">
+
 * **Game Page**
+
+    * The Game Page is the main focus of the website. It is host to many features including but not limited to a dynamic cover so the user cannot just read the card name until they have guessed to an ending screen which gives the user a win or loss based on their score.
+    * The first thing a user will see is the randomly chosen card, the cover, and four buttons each with an answer chosen by me to not be too "obvious".
+    * After clicking an answer button, the user will see the cover disappear, revealing their card. It will tell the user below whether they got the answer right or wrong, and tell them again what the card is. The last thing they will see is a "Next Card" button, which loads up our next round, giving the user another random card.
+    * The score located below the card will increment every time a user gets an answer correct. As stated in the rules of the first page, you only get 7 tries so the user has to make them count. It is designed so someone new to the cards will likely not win the first time, and be eager to play again to learn more.
+    * After a user makes 7 guesses, whether they are right or wrong, all of the features of the game page are hidden, and replaced with a win condition end screen.
+    * If a player has won, they get a congratulatory screen telling them they got everything correct.
+    * However, if a player loses, they will receive an encouraging end screen prompting them to play again.
+    * Regardless of a win or loss, the player will see a "Play Again?" button at the bottom of their screen, which will completely reset the game and run it again.
+
+<img src="readme-images/tarot-card.PNG"> <img src="readme-images/tarot-button.PNG"> 
+
+<img src="readme-images/tarot-rightwrong.PNG">
+
+<img src="readme-images/tarot-end.PNG">
 
 ## Testing and Bug Solving
 <hr>
@@ -77,10 +109,10 @@ The website areas of this mockup were generally not as important as the game moc
 * **Validation Testing**
 
     * HTML
-        * There were no errors when validated on [W3C Validator](#)
+        * There were no errors when validated on [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmkenihandev.github.io%2Ftarot-guesser%2F)
 
     * CSS
-        * There were no errors when passed through the [Jigsaw W3C Validation Service](#)
+        * There were no errors when passed through the [Jigsaw W3C Validation Service](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmkenihandev.github.io%2Ftarot-guesser%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
     * Accessibility 
         * The site was run through both desktop and mobile Lighthouse and scored above # in every section.
