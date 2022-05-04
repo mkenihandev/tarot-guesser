@@ -106,6 +106,12 @@ Navbar while on the game page
     * The game section of the website was displaying incorrectly on other browsers (Safari, Chrome), buttons were hanging way outside the game area and more
         * Solved by discovering "grid-row" instead of "grid-template-rows" in the responsive styling, Firefox was displaying correctly despite this so it went undiscovered for a while.
 
+* **Browser Testing and User Stories**
+
+<img src="readme-images/testing-matrix.PNG">
+
+<img src="readme-images/user-matrix.PNG">
+
 * **Validation Testing**
 
     * HTML
@@ -114,8 +120,16 @@ Navbar while on the game page
     * CSS
         * There were no errors when passed through the [Jigsaw W3C Validation Service](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmkenihandev.github.io%2Ftarot-guesser%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
+    * JS
+        * There were warnings with the JavaScript when passed through JShint, however most were "x is available in ES6" and "template literal syntax is only available in ES6".
+
     * Accessibility 
-        * The site was run through both desktop and mobile Lighthouse and scored above # in every section.
+        * The site was run through both desktop and mobile Lighthouse and scored above 90 in every section except for performance on mobile.
+        * My assumption is that this is because of the amount of images saved as .PNG so in the future I would like to lower the performance cost of my website.
+
+    <img src="readme-images/lighthouse-desktop.PNG">
+
+    <img src="readme-images/lighthouse-mobile.PNG">
 
 ## Deployment
 <hr>
