@@ -199,7 +199,6 @@ function checkAnswer(answerClicked) { // answerClicked takes over as the variabl
     let answer = card;
     let correct = answerClicked === answer;
     ++counter;
-    console.log(correct);
 
     checkGuess(correct);
 
